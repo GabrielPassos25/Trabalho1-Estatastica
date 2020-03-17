@@ -1,0 +1,56 @@
+instruções:
+
+Considere o conjunto de dados sobre o covid-19 (em formato excel), os dados correspondem ao número de casos e de mortes diarios por país até o dia 17/03/2020.
+
+Instale o R Studio (ou R) e importe a tabela de dados em anexo. Usando o R, responda as questões abaixo seguindo as instruções:
+
+Usando algum livro texto sugerido na ementa, ou fazendo uso de algum recurso encontrado na internet, leia o texto sobre "Covariância e Correlação amostrais", como se calcula, como se interpreta. Textos bem explicativos podem ser encontrados no livros de Estatística (veja bibligrafia) ou na internet. Por exemplo:
+
+https://pt.wikihow.com/Calcular-a-Covari%C3%A2ncia
+
+https://pt.wikihow.com/Calcular-o-Coeficiente-de-Correla%C3%A7%C3%A3o
+
+O codigo em R em anexo fornece comando para obtenção das análises abaixo.
+
+1) Resumindo os dados em 'casos' por dia:
+
+a) avalie a envolução do contágio.
+
+b) Faça gráficos, calcule medias de posição e dispersão e analise.
+
+2) Considere o numero de casos de covid-19 por país, e os dados sobre a idade média da população de cada país, existe uma correlação entre idade da população e numero de contagios?
+
+lista dos paises com populações mais velhas: https://en.wikipedia.org/wiki/List_of_countries_by_median_age
+
+3) Sobre a mortalidade:
+
+a) Qual a taxa de mortalidade por país e geral?
+
+b) Repita a análise (2) mas considerando mortes.
+
+4) procure textos que contenham estatisticas semelhates às calculadas acima, mas sobre SARS e H1N1, compare-as com as de convid-19.
+
+####################################
+
+Codigo em R
+
+
+install.packages("tstools","plyr")
+
+library(tstools)
+require(stats)
+library(plyr)
+
+plot(1:5388,covid$Cases)
+
+casos.dia=tapply(covid[,5],covid[,"DateRep"],sum) # Numero de casos por dia no mundo
+
+plot(casos.dia,lty=1,type='l')
+
+summary(casos.dia) # sumarios estatisticos
+
+hist(casos.dia)
+
+boxplot(casos.dia)
+
+mortes.pais=tapply(covid[,6],covid[,7],sum) # Numero de mortes por pais
