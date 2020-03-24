@@ -177,7 +177,9 @@ Desvio Padrão: 308.7033
    [1] 308.7033
 ```
 Em relação ao número de <b>Mortes</b>:
+<br>
 <b>Medidas de posicao</b>:
+<br>
 Média: 1.3183
 ```r
    vector_deaths <-COVID$Deaths
