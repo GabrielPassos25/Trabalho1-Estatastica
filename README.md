@@ -126,9 +126,7 @@ Moda : 0
 <br>
 De dentro para fora:
 <br>
-<br>
 <b>match(X,unicoX)</b> -> Retorna um vetor dizendo a posição da primeira ocorrência de um elemento do vetor X (Elementos do x sem repetição) no unicoX. 
-<br>
 Ex:
 ```r
 x = [0 0 0 0 0 0 1 2 3 0 0 0 3]
@@ -139,7 +137,6 @@ Ex
 ```
 <br>
 <b>tabulate(match(X,unicoX)</b> --> Conta o número de ocorrências de cada elemento distinto no vetor criado por match(X,unicoX).
-<br>
 Ex:
 ```r
 Assuma que ainda temos o vetor "Ex", do exemplo passado.
@@ -153,7 +150,6 @@ Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez assim c
 <br>
 <br>
 <b>which.max(tabulate(match(X,unicoX))</b> --> Retorna a posição do elemento maximal do vetor criado por tabulate(match(X,unicoX)).
-<br>
 Ex:
 ```r
 Assuma que ainda temos o vetor "Ex2", do exemplo passado.
@@ -250,14 +246,12 @@ lista dos paises com populações mais velhas: https://en.wikipedia.org/wiki/Lis
 ## Resposta
 
 Visando organizar o número de caso por País, realizei o comando "aggregate()" que agrega os valores de colunas em uma tabela (onde as colunas representam os valores solicitados, no caso a soma dos casos, dado pela "FUN = sim" em relação aos países), como mostrado abaixo:
-
 ```r
    CasosPorPais <- aggregate(x=COVID$Cases,
                  by = list(COVID$`Countries and territories`),
                  FUN = sum)
    CasosPorPais
 ```
-<br>
 Temos o seguinte output:
 ```r
    ##                                        Group.1     x
@@ -407,7 +401,6 @@ Temos o seguinte output:
    ## 144                                  Venezuela    33
    ## 145                                    Vietnam    61
 ```
-<br>
 Porém, como estamos interessados nos países com o maior número de casos, temos que inverter esse output. Para isso, o comando utilizado foi:
 ```r
    CasosPorPais <- CasosPorPais[order(CasosPorPais[,2]), TRUE]
@@ -564,7 +557,6 @@ Que ordena a tabela,por número de casos de forma crescente, "CasosPorPais" pela
    140                United_Republic_of_Tanzania     1
    91                                     Myanmar     0
 ```
-<br>
 Porém ainda não possuimos a idade média dos países. Para isso, baixei a tabela que o professor disponibilizou no enunciado da questão e juntei com a tabela "CasosPorPais", através do comando abaixo:
 ```r
    IdadePorPais <- IdadeMedia$Median (Tabela do wikipedia)
@@ -719,7 +711,6 @@ Porém ainda não possuimos a idade média dos países. Para isso, baixei a tabe
 
 
 ```
-<br>
 Agora sim podemos analisar a influência da idade média em relação ao número de casos nos países. Sabendo que a idade média mundial é de 30.4 anos, todos os países mais afetados pelo COVID-19 estão acima da média mundial, com excessão do Irã, que tem 30,3, quase a média. Porém analisando melhor, os países que estão sendo mais afetados são exatamente aqueles que tem uma população com a idade média acima de 40 anos e aqueles que tem uma idade média abaixo de 30 anos estão sendo pouco afetados.
 <br>
 
