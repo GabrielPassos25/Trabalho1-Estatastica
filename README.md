@@ -104,7 +104,6 @@ Média: 33.43708
    mean_cases
    [1] 33.43708
 ```
-<br>
 Mediana : 0
 ```r
    vector_cases <-COVID$Cases
@@ -112,7 +111,6 @@ Mediana : 0
    median_cases
    [1] 0
 ```
-<br>
 Moda : 0
 ```r
    getmode <- function(v){
@@ -132,7 +130,6 @@ De dentro para fora:
 <b>match(X,unicoX)</b> -> Retorna um vetor dizendo a posição da primeira ocorrência de um elemento do vetor X (Elementos do x sem repetição) no unicoX. 
 <br>
 Ex:
-<br>
 ```r
 x = [0 0 0 0 0 0 1 2 3 0 0 0 3]
 unicoX = [0 1 2 3]
@@ -144,7 +141,6 @@ Ex
 <b>tabulate(match(X,unicoX)</b> --> Conta o número de ocorrências de cada elemento distinto no vetor criado por match(X,unicoX).
 <br>
 Ex:
-<br>
 ```r
 Assuma que ainda temos o vetor "Ex", do exemplo passado.
 Ex
@@ -159,7 +155,6 @@ Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez assim c
 <b>which.max(tabulate(match(X,unicoX))</b> --> Retorna a posição do elemento maximal do vetor criado por tabulate(match(X,unicoX)).
 <br>
 Ex:
-<br>
 ```r
 Assuma que ainda temos o vetor "Ex2", do exemplo passado.
 Ex2
