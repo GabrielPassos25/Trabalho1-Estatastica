@@ -178,7 +178,9 @@ Desvio Padrão: 308.7033
 ```
 Em relação ao número de <b>Mortes</b>:
 <br>
+<br>
 <b>Medidas de posicao</b>:
+<br>
 <br>
 Média: 1.3183
 ```r
@@ -205,6 +207,7 @@ Moda: 0
    [1] 0
 ```
 <b>Medidas de dispersão</b>:
+<br>
 Amplitude:
 Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 370 - 0 = 370
 Variância: 165.6523
