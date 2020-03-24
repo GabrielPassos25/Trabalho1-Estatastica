@@ -1,5 +1,5 @@
 # Trabalho1-Estatística
-author: "GabrielPassos"
+Author: "GabrielPassos"
 ## Resolução para o trabalho solicitado durante a paralisação da faculdade.
 
 1) Resumindo os dados em 'casos' por dia:
@@ -125,7 +125,6 @@ Moda : 0
 <br>
 <br>
 De dentro para fora:
-<br>
 <b>match(X,unicoX)</b> -> Retorna um vetor dizendo a posição da primeira ocorrência de um elemento do vetor X (Elementos do x sem repetição) no unicoX. 
 Ex:
 ```r
@@ -135,7 +134,6 @@ Ex <- match(X,unicoX)
 Ex
 [1] 1 1 1 1 1 1 2 3 4 1 1 1 4
 ```
-<br>
 <b>tabulate(match(X,unicoX)</b> --> Conta o número de ocorrências de cada elemento distinto no vetor criado por match(X,unicoX).
 Ex:
 ```r
@@ -147,8 +145,6 @@ Ex2
 [1] 9 1 1 2
 ```
 Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez assim como o 3 e o 4 se repetiu 2 vezes.
-<br>
-<br>
 <b>which.max(tabulate(match(X,unicoX))</b> --> Retorna a posição do elemento maximal do vetor criado por tabulate(match(X,unicoX)).
 Ex:
 ```r
@@ -168,28 +164,20 @@ Isso nos mostra que o maximal (9), que representa o número que mais se repetiu 
 Amplitude: 
 <br>
 Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 15141 - (-9) = 15150
-<br>
 Variância: 95297.74
 ```r
    variancia_cases <- var(COVID$Cases)
    variancia_cases
    [1] 95297.74
 ```
-<br>
 Desvio Padrão: 308.7033
 ```r
    dp_cases <- sd(COVID$Cases)
    dp_cases
    [1] 308.7033
 ```
-<br>
-<br>
 Em relação ao número de <b>Mortes</b>:
-<br>
-<br>
 <b>Medidas de posicao</b>:
-<br>
-<br>
 Média: 1.3183
 ```r
    vector_deaths <-COVID$Deaths
@@ -214,31 +202,21 @@ Moda: 0
    mode_deaths
    [1] 0
 ```
-<br>
-<br>
 <b>Medidas de dispersão</b>:
-<br>
-<br>
-Amplitude: 
-<br>
+Amplitude:
 Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 370 - 0 = 370
-<br>
 Variância: 165.6523
 ```r
    variancia_deaths <- var(COVID$Deaths)
    variancia_deaths
    [1] 165.6523
 ```
-<br>
 Desvio Padrão: 308.7033
 ```r
    dp_deaths <- sd(COVID$Deaths)
    dp_deaths
    [1] 12.8706
 ```
-<br>
-<br>
-<br>
 2) Considere o numero de casos de covid-19 por país, e os dados sobre a idade média da população de cada país, existe uma correlação entre idade da população e numero de contagios?
 
 lista dos paises com populações mais velhas: https://en.wikipedia.org/wiki/List_of_countries_by_median_age
