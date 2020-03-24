@@ -125,7 +125,7 @@ Moda : 0
 <br>
 <br>
 De dentro para fora:
-<b>match(X,unicoX)</b> -> Retorna um vetor dizendo a posição da primeira ocorrência de um elemento do vetor X (Elementos do x sem repetição) no unicoX. 
+<b>match(X,unicoX)</b> -> Retorna um vetor dizendo a posição da primeira ocorrência de um elemento do vetor X no unicoX (Elementos do x sem repetição).
 Ex:
 ```r
 x = [0 0 0 0 0 0 1 2 3 0 0 0 3]
