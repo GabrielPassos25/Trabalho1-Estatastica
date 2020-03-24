@@ -1,10 +1,4 @@
----
-title: "Trabalho1"
 author: "GabrielPassos"
-date: "3/18/2020"
-output:
-  html_document: default
----
 ## Resolução para o trabalho solicitado durante a paralisação da faculdade.
 
 1) Resumindo os dados em 'casos' por dia:
