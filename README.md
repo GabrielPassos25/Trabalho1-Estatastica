@@ -707,7 +707,7 @@ a) Qual a taxa de mortalidade por país e geral?
 
 b) Repita a análise (2) mas considerando mortes.
 
-##Item A:
+## Item A:
 Primeiro temos que extrair dados sobre a população de cada local e colocar na tabela WorldPopulation. 
    https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
 
@@ -1048,7 +1048,7 @@ Em seguida, precisamos calcular a Taxa de Mortalidade Geral, para isso, somaremo
 
 ```
 
-##Item B:
+## Item B:
 
 Importando a tabela IdadeMedia utilizada antes, podemos extrair os valores necessários por meio de:
 
@@ -1435,10 +1435,10 @@ Agora, similarmente ao exercício 2, juntaremos os dados para uma melhor avalia�
    Dessa forma, lembrando que a idade média mundial é de 30.4 anos, vemos que todos os países com grande número de fatalidades apresentam idade média acima, ou muito próximo, dessa marca. Apesar disso, locais como Mônaco e Malta, cujos idade média ultrapassam muito a marca mundial, apresentam poucas mortes, assim como muitos outros exemplos. Então, apesar de poder ser um fator que impacta nas fatalidades, não é o único.
 
 
-##Questão 4
+## Questão 4
 De acordo com dados oficiais divulgados no site da World Health Organization (WHO), alguns pontos a se destacar são:
 
-###Influenza
+### Influenza
 
 >The speed of transmission is an important point of difference between the two viruses. Influenza has a shorter median incubation period (the time from infection to appearance of symptoms) and a shorter serial interval (the time between successive cases) than COVID-19 virus. The serial interval for COVID-19 virus is estimated to be 5-6 days, while for influenza virus, the serial interval is 3 days. This means that influenza can spread faster than COVID-19.
 
@@ -1446,7 +1446,7 @@ De acordo com dados oficiais divulgados no site da World Health Organization (WH
 
 >Mortality for COVID-19 appears higher than for influenza, especially seasonal influenza. While the true mortality of COVID-19 will take some time to fully understand, the data we have so far indicate that the crude mortality ratio (the number of reported deaths divided by the reported cases) is between 3-4%, the infection mortality rate (the number of reported deaths divided by the number of infections) will be lower. For seasonal influenza, mortality is usually well below 0.1%. However, mortality is to a large extent determined by access to and quality of health care. 
 
-###SARS
+### SARS
 
 >According to the World Health Organization (WHO), a total of 8,098 people worldwide became sick with SARS during the 2003 outbreak. Of these, 774 died. In the United States, only eight people had laboratory evidence of SARS-CoV infection. All of these people had traveled to other parts of the world where SARS was spreading. SARS did not spread more widely in the community in the United States.
 
