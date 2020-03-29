@@ -17,7 +17,7 @@ A opção que achei mais viável para analisar a evolução do contágio foi obt
  axis(side=1, at=c(1:31))
  axis(side=2, at=seq(0, 15141, by=500))
 ```
-<b>Plot que mostra a concentração de Casos x Dias --></b>
+<b>Plot que mostra a concentração de Casos x Dias:</b>
 ![](figure/unnamed-chunk-3-1.png)
 <br>
 <b>Explicação do gráfico:</b> 
