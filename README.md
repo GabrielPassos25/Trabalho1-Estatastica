@@ -1430,3 +1430,26 @@ Agora, similarmente ao exercício 2, juntaremos os dados para uma melhor avalia�
 ```
 
    Dessa forma, lembrando que a idade média mundial é de 30.4 anos, vemos que todos os países com grande número de fatalidades apresentam idade média acima, ou muito próximo, dessa marca. Apesar disso, locais como Mônaco e Malta, cujos idade média ultrapassam muito a marca mundial, apresentam poucas mortes, assim como muitos outros exemplos. Então, apesar de poder ser um fator que impacta nas fatalidades, não é o único.
+
+
+##Questão 4
+De acordo com dados oficiais divulgados no site da World Health Organization (WHO), alguns pontos a se destacar são:
+
+###Influenza
+
+>The speed of transmission is an important point of difference between the two viruses. Influenza has a shorter median incubation period (the time from infection to appearance of symptoms) and a shorter serial interval (the time between successive cases) than COVID-19 virus. The serial interval for COVID-19 virus is estimated to be 5-6 days, while for influenza virus, the serial interval is 3 days. This means that influenza can spread faster than COVID-19.
+
+>While the range of symptoms for the two viruses is similar, the fraction with severe disease appears to be different. For COVID-19, data to date suggest that 80% of infections are mild or asymptomatic, 15% are severe infection, requiring oxygen and 5% are critical infections, requiring ventilation. These fractions of severe and critical infection would be higher than what is observed for influenza infection.
+
+>Mortality for COVID-19 appears higher than for influenza, especially seasonal influenza. While the true mortality of COVID-19 will take some time to fully understand, the data we have so far indicate that the crude mortality ratio (the number of reported deaths divided by the reported cases) is between 3-4%, the infection mortality rate (the number of reported deaths divided by the number of infections) will be lower. For seasonal influenza, mortality is usually well below 0.1%. However, mortality is to a large extent determined by access to and quality of health care. 
+
+###SARS
+
+>According to the World Health Organization (WHO), a total of 8,098 people worldwide became sick with SARS during the 2003 outbreak. Of these, 774 died. In the United States, only eight people had laboratory evidence of SARS-CoV infection. All of these people had traveled to other parts of the world where SARS was spreading. SARS did not spread more widely in the community in the United States.
+
+Analisando-os, podemos perceber que o surto de SARS foi bem leviano em relação aos outros, com baixa taxa de mortalidade e trasmissão controlada. 
+
+![](figure/Rplot18.png)
+
+
+Em contramão, o H1N1 se aparenta muito ao COVID-19 em certos aspectos, exemplo a presença alta de casos assintomáticos e casos mais graves que acarretam em morte, além de sua forma de transmissão. Entretanto, como supracitado, a velocidade de transmissão é o principal ponto de divergência, pois o influenza possui um maior estágio de tempo antes dos sintomas aparecerem, abrindo uma grande lacuna para novas infecções, mas o COVID19 possui uma maior reprodutividade maior - número de infecções secundárias a partir de um indivíduo infectado. Além disso, o corona virus possui uma mortalidade maior, assim como maior número de casos agravantes.
