@@ -17,7 +17,9 @@ A opção que achei mais viável para analisar a evolução do contágio foi obt
  axis(side=1, at=c(1:31))
  axis(side=2, at=seq(0, 15141, by=500))
 ```
-<b>Plot que mostra a concentração de Casos x Dias:</b>
+<br>
+<b>Concentração de Casos x Dias:</b>
+
 ![](figure/unnamed-chunk-3-1.png)
 <br>
 <b>Explicação do gráfico:</b> 
@@ -542,6 +544,7 @@ Que ordena a tabela,por número de casos de forma crescente, "CasosPorPais" pela
 ```
 Porém ainda não possuimos a idade média dos países. Para isso, baixei a tabela que o professor disponibilizou no enunciado da questão e juntei com a tabela "CasosPorPais", através do comando abaixo:
 ```r
+   
    IdadePorPais <- IdadeMedia$Median (Tabela do wikipedia)
    Juncao = merge(CasosPorPais, IdadePorPais, by="Group.1", all.x = TRUE) (all.x prevalece a tabela inicial "CasosPorPais", somente adicionando as intercessões das tabelas)
    Juncao
