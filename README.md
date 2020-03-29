@@ -1452,7 +1452,6 @@ De acordo com dados oficiais divulgados no site da World Health Organization (WH
 
 Analisando-os, podemos perceber que o surto de SARS foi bem leviano em relação aos outros, com baixa taxa de mortalidade e trasmissão controlada. 
 
-![](figure/Rplot18.png)
-
+![](figure/Rplot18.jpg)
 
 Em contramão, o H1N1 se aparenta muito ao COVID-19 em certos aspectos, exemplo a presença alta de casos assintomáticos e casos mais graves que acarretam em morte, além de sua forma de transmissão. Entretanto, como supracitado, a velocidade de transmissão é o principal ponto de divergência, pois o influenza possui um maior estágio de tempo antes dos sintomas aparecerem, abrindo uma grande lacuna para novas infecções, mas o COVID19 possui uma maior reprodutividade maior - número de infecções secundárias a partir de um indivíduo infectado. Além disso, o corona virus possui uma mortalidade maior, assim como maior número de casos agravantes.
