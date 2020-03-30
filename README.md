@@ -1,5 +1,11 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Trabalho1-Estatística
 Author: "GabrielPassos", "GabrielBrilhante"
+
 ## Resolução para o trabalho solicitado durante a paralisação da faculdade.
 
 1) Resumindo os dados em 'casos' por dia:
