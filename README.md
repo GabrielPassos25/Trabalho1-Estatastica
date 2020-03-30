@@ -4,7 +4,7 @@ Author: "GabrielPassos"
 
 1) Resumindo os dados em 'casos' por dia:
 
-a) avalie a envolução do contágio.
+a) avalie a evolução do contágio.
 
 b) Faça gráficos, calcule medias de posição e dispersão e analise.
 <br><br>
@@ -24,9 +24,9 @@ A opção que achei mais viável para analisar a evolução do contágio foi obt
 <br>
 <b>Explicação do gráfico:</b> 
 <br>
-Temos o plot gerado pleo código acima, no qual o eixo X representa os dias de infecção no mundo cronologicamente (todos os países entram nesses dias) e no eixo Y possuímos o número de casos de infectados no mundo todo.
+Temos o plot gerado pelo código acima, no qual o eixo X representa os dias de infecção no mundo cronologicamente (todos os países entram nesses dias) e no eixo Y possuímos o número de casos de infectados no mundo todo.
 <br>
-Analisando o gráfico, percebemos que até o dia 15, a concentração de "bolinhas" tendem a aumentar exponencialmente, chegando até mesmo ao maior número de casos registrados (15141), (pode ser visto por "bolinhas" cada vez mais escuras a medida que o valor do eixo X tende ao valor 15) mostrando que o número de casos tende a aumentar de forma exponencial até o dia 15 da tabela fornecida. <br> Porém após o dia 15 (pico da epidemia nos países) o número de infectados tende a diminuir, proveniente da resguarda da população e, quem sabe, de medidas tomadas pelo governo. 
+Analisando o gráfico, percebemos que até o dia 15, a concentração de "bolinhas" tende a aumentar exponencialmente, chegando até mesmo ao maior número de casos registrados (15141), (pode ser visto por "bolinhas" cada vez mais escuras na medida que o valor do eixo X tende ao valor 15) mostrando que o número de casos tende a aumentar de forma exponencial até o dia 15 da tabela fornecida. <br> Porém após o dia 15 (pico da epidemia nos países) o número de infectados tende a diminuir, proveniente da resguarda da população e, quem sabe, de medidas tomadas pelo governo. 
 
 
 ## Item B:
@@ -77,26 +77,26 @@ Analisando o gráfico, percebemos que até o dia 15, a concentração de "bolinh
 ```
 ![](figure/Rplot16.png)
 <br>
-https://postimg.cc/0M0gVBM6 --> Link para a imagem, com uma resolucão melhor(Clique em "zoom", a qualidade da imagem ficará perfeita.)
+https://postimg.cc/0M0gVBM6 --> Link para a imagem, com uma resolucão melhor (Clique em "zoom", a qualidade da imagem ficará perfeita).
 <br>
 <br>
-<b>Plot que mostra a concentração de Morte x País: (Por favor, dê um zoom, a quantidade de países é grande, logo o gráfico fica bem largo)</b>
+<b>Plot que mostra a concentração de Mortes x País: (Por favor, dê um zoom, a quantidade de países é grande, logo o gráfico fica bem largo)</b>
 ```r
    barplot(COVID$Deaths, names.arg = COVID$GeoId)
 ```
 ![](figure/Rplot17.png)
 <br>
-https://postimg.cc/bZkm022r --> Link para a imagem, com uma resolucão melhor(Clique em "zoom", a qualidade da imagem ficará perfeita.)
+https://postimg.cc/bZkm022r --> Link para a imagem, com uma resolucão melhor (Clique em "zoom", a qualidade da imagem ficará perfeita).
 <br>
 
 # Segunda Parte:
-<b>Todos os resultados sao referentes ao numero de casos e de mortes ao longo dos dias, mundialmente!</b>
+<b>Todos os resultados são referentes ao número de casos e de mortes ao longo dos dias, mundialmente!</b>
 <br>
 <br>
 Em relação ao número de <b>Casos</b>:
 <br>
 <br>
-<b>Medidas de posicao</b>:
+<b>Medidas de posição</b>:
 <br>
 <br>
 Média: 33.43708
@@ -106,14 +106,14 @@ Média: 33.43708
    mean_cases
    [1] 33.43708
 ```
-Mediana : 0
+Mediana: 0
 ```r
    vector_cases <-COVID$Cases
    median_cases <- median(vector_cases)
    median_cases
    [1] 0
 ```
-Moda : 0
+Moda: 0
 ```r
    getmode <- function(v){
       uniqv <- unique(v)
@@ -146,7 +146,7 @@ Ex2 <- tabulate(Ex)
 Ex2
 [1] 9 1 1 2
 ```
-Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez assim como o 3 e o 4 se repetiu 2 vezes.
+Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez, assim como o 3 e o 4 se repetiram 2 vezes cada.
 <b>which.max(tabulate(match(X,unicoX))</b> --> Retorna a posição do elemento maximal do vetor criado por tabulate(match(X,unicoX)).
 Ex:
 ```r
@@ -157,7 +157,7 @@ Ex3 <- which.max(Ex2)
 Ex3
 [1] 1
 ```
-Isso nos mostra que o maximal (9), que representa o número que mais se repetiu no vetor criado pelo comando match() (que contou a repetição de cada elemento distinto, logo o elemento que mais se repetiu (moda) aparece pela primeira vez na posição 1 do vetor x. Logo a moda nesse caso seria x[1] = 0.
+Isso nos mostra que o maximal (9), que representa o número que mais se repetiu no vetor criado pelo comando match() (que contou a repetição de cada elemento distinto), logo o elemento que mais se repetiu (moda) aparece pela primeira vez na posição 1 do vetor x. Logo a moda nesse caso seria x[1] = 0.
 <br>
 <br>
 <b>Medidas de dispersão</b>:
@@ -181,7 +181,7 @@ Desvio Padrão: 308.7033
 Em relação ao número de <b>Mortes</b>:
 <br>
 <br>
-<b>Medidas de posicao</b>:
+<b>Medidas de posição</b>:
 <br>
 <br>
 Média: 1.3183
@@ -224,13 +224,13 @@ Desvio Padrão: 308.7033
    dp_deaths
    [1] 12.8706
 ```
-2) Considere o numero de casos de covid-19 por país, e os dados sobre a idade média da população de cada país, existe uma correlação entre idade da população e numero de contagios?
+2) Considere o número de casos de COVID-19 por país, e os dados sobre a idade média da população de cada país, existe uma correlação entre idade da população e número de contágios?
 
-lista dos paises com populações mais velhas: https://en.wikipedia.org/wiki/List_of_countries_by_median_age
+Lista dos países com populações mais velhas: https://en.wikipedia.org/wiki/List_of_countries_by_median_age
 
 ## Resposta
 
-Visando organizar o número de caso por País, realizei o comando "aggregate()" que agrega os valores de colunas em uma tabela (onde as colunas representam os valores solicitados, no caso a soma dos casos, dado pela "FUN = sim" em relação aos países), como mostrado abaixo:
+Visando organizar o número de caso por <b>País</b>, realizei o comando "aggregate()" que agrega os valores de colunas em uma tabela (da qual as colunas representam os valores solicitados, no caso a soma dos casos, dado pela "FUN = sum" em relação aos países), como mostrado abaixo:
 ```r
    CasosPorPais <- aggregate(x=COVID$Cases,
                  by = list(COVID$`Countries and territories`),
@@ -389,9 +389,8 @@ Temos o seguinte output:
 Porém, como estamos interessados nos países com o maior número de casos, temos que inverter esse output. Para isso, o comando utilizado foi:
 ```r
    CasosPorPais <- CasosPorPais[order(CasosPorPais[,2]), TRUE]
-   CasosPorPais
 ```
-Que ordena a tabela,por número de casos de forma crescente, "CasosPorPais" pela coluna 2, no caso o x. Porém, ainda estamos com o maior número de casos no fim da tabela. Para ordenar de forma decrescente o comando utilizado foi:
+Que ordena a tabela por número de casos de forma crescente ("CasosPorPais" pela coluna 2, no caso o x). Porém, ainda estamos com o maior número de casos no fim da tabela. Para ordenar de forma decrescente o comando utilizado foi:
 ```r
    CasosPorPais <- CasosPorPais[order(x, decreasing = TRUE),]
    CasosPorPais
@@ -697,7 +696,7 @@ Porém ainda não possuimos a idade média dos países. Para isso, baixei a tabe
 
 
 ```
-Agora sim podemos analisar a influência da idade média em relação ao número de casos nos países. Sabendo que a idade média mundial é de 30.4 anos, todos os países mais afetados pelo COVID-19 estão acima da média mundial, com excessão do Irã, que tem 30,3, quase a média. Porém analisando melhor, os países que estão sendo mais afetados são exatamente aqueles que tem uma população com a idade média acima de 40 anos e aqueles que tem uma idade média abaixo de 30 anos estão sendo pouco afetados.
+Agora sim podemos analisar a influência da idade média em relação ao número de casos nos países. Sabendo que a idade média mundial é de 30.4 anos, todos os países mais afetados pelo COVID-19 estão acima da média mundial, com excessão do Irã, que tem 30,3, quase a média. Porém, analisando melhor, os países que estão sendo mais afetados são exatamente aqueles que têm uma população com a idade média acima de 40 anos, já aqueles que têm uma idade média abaixo de 30 anos estão sendo pouco afetados.
 <br>
 
 
@@ -718,152 +717,152 @@ Agora temos que calcular a taxa de mortalidade, mas antes pegaremos o número de
 
    MortesPorPais
 
-   ##                                      Group.1    x
-   # 1                                  Afghanistan    0
-   # 2                                      Albania    1
-   # 3                                      Algeria    4
-   # 4                                      Andorra    0
-   # 5                          Antigua_and_Barbuda    0
-   # 6                                    Argentina    2
-   # 7                                      Armenia    0
-   # 8                                    Australia    5
-   # 9                                      Austria    3
-   # 10                                  Azerbaijan    0
-   # 11                                     Bahamas    0
-   # 12                                     Bahrain    1
-   # 13                                  Bangladesh    0
-   # 14                                     Belarus    0
-   # 15                                     Belgium    5
-   # 16                                       Benin    0
-   # 17                                      Bhutan    0
-   # 18                                     Bolivia    0
-   # 19                      Bosnia_and_Herzegovina    0
-   # 20                                      Brazil    0
-   # 21                           Brunei_Darussalam    0
-   # 22                                    Bulgaria    2
-   # 23                                Burkina_Faso    0
-   # 24                                    Cambodia    0
-   # 25                                    Cameroon    0
-   # 26                                      Canada    4
-   # 27  Cases_on_an_international_conveyance_Japan    7
-   # 28                    Central_African_Republic    0
-   # 29                                       Chile    0
-   # 30                                       China 3226
-   # 31                                    Colombia    0
-   # 32                                       Congo    0
-   # 33                                  Costa_Rica    0
-   # 34                                Cote_dIvoire    0
-   # 35                                     Croatia    0
-   # 36                                        Cuba    0
-   # 37                                      Cyprus    0
-   # 38                              Czech_Republic    0
-   # 39            Democratic_Republic_of_the_Congo    0
-   # 40                                     Denmark    1
-   # 41                          Dominican_Republic    0
-   # 42                                     Ecuador    2
-   # 43                                       Egypt    2
-   # 44                           Equatorial_Guinea    0
-   # 45                                     Estonia    0
-   # 46                                    Eswatini    0
-   # 47                                    Ethiopia    0
-   # 48                                     Finland    0
-   # 49                                      France  148
-   # 50                                       Gabon    0
-   # 51                                     Georgia    0
-   # 52                                     Germany   13
-   # 53                                       Ghana    0
-   # 54                                      Greece    4
-   # 55                                   Guatemala    1
-   # 56                                      Guinea    0
-   # 57                                      Guyana    1
-   # 58                                    Holy_See    0
-   # 59                                    Honduras    0
-   # 60                                     Hungary    1
-   # 61                                     Iceland    0
-   # 62                                       India    3
-   # 63                                   Indonesia    5
-   # 64                                        Iran  853
-   # 65                                        Iraq    9
-   # 66                                     Ireland    2
-   # 67                                      Israel    0
-   # 68                                       Italy 2158
-   # 69                                     Jamaica    0
-   # 70                                       Japan   28
-   # 71                                      Jordan    0
-   # 72                                  Kazakhstan    0
-   # 73                                       Kenya    0
-   # 74                                      Kosovo    0
-   # 75                                      Kuwait    0
-   # 76                                      Latvia    0
-   # 77                                     Lebanon    3
-   # 78                                     Liberia    0
-   # 79                               Liechtenstein    0
-   # 80                                   Lithuania    0
-   # 81                                  Luxembourg    1
-   # 82                                    Malaysia    0
-   # 83                                    Maldives    0
-   # 84                                       Malta    0
-   # 85                                  Mauritania    0
-   # 86                                      Mexico    0
-   # 87                                     Moldova    0
-   # 88                                      Monaco    0
-   # 89                                    Mongolia    0
-   # 90                                     Morocco    1
-   # 91                                     Myanmar    0
-   # 92                                     Namibia    0
-   # 93                                       Nepal    0
-   # 94                                 Netherlands   24
-   # 95                                 New_Zealand    0
-   # 96                                     Nigeria    0
-   # 97                             North_Macedonia    0
-   # 98                                      Norway    3
-   # 99                                        Oman    0
-   # 100                                   Pakistan    0
-   # 101                                  Palestine    0
-   # 102                                     Panama    1
-   # 103                                   Paraguay    0
-   # 104                                       Peru    0
-   # 105                                Philippines   12
-   # 106                                     Poland    4
-   # 107                                   Portugal    0
-   # 108                                      Qatar    0
-   # 109                                    Romania    0
-   # 110                                     Russia    0
-   # 111                                     Rwanda    0
-   # 112                                Saint_Lucia    0
-   # 113           Saint_Vincent_and_the_Grenadines    0
-   # 114                                 San_Marino    9
-   # 115                               Saudi_Arabia    0
-   # 116                                    Senegal    0
-   # 117                                     Serbia    0
-   # 118                                 Seychelles    0
-   # 119                                  Singapore    0
-   # 120                                   Slovakia    0
-   # 121                                   Slovenia    0
-   # 122                                    Somalia    0
-   # 123                               South_Africa    0
-   # 124                                South_Korea   81
-   # 125                                      Spain  309
-   # 126                                  Sri_Lanka    0
-   # 127                                      Sudan    1
-   # 128                                   Suriname    0
-   # 129                                     Sweden    7
-   # 130                                Switzerland   14
-   # 131                                     Taiwan    1
-   # 132                                   Thailand    1
-   # 133                                       Togo    0
-   # 134                        Trinidad_and_Tobago    0
-   # 135                                    Tunisia    0
-   # 136                                     Turkey    0
-   # 137                                    Ukraine    0
-   # 138                       United_Arab_Emirates    0
-   # 139                             United_Kingdom   55
-   # 140                United_Republic_of_Tanzania    0
-   # 141                   United_States_of_America   85
-   # 142                                    Uruguay    0
-   # 143                                 Uzbekistan    0
-   # 144                                  Venezuela    0
-   # 145                                    Vietnam    0
+                                        Group.1    x
+   1                                  Afghanistan    0
+   2                                      Albania    1
+   3                                      Algeria    4
+   4                                      Andorra    0
+   5                          Antigua_and_Barbuda    0
+   6                                    Argentina    2
+   7                                      Armenia    0
+   8                                    Australia    5
+   9                                      Austria    3
+   10                                  Azerbaijan    0
+   11                                     Bahamas    0
+   12                                     Bahrain    1
+   13                                  Bangladesh    0
+   14                                     Belarus    0
+   15                                     Belgium    5
+   16                                       Benin    0
+   17                                      Bhutan    0
+   18                                     Bolivia    0
+   19                      Bosnia_and_Herzegovina    0
+   20                                      Brazil    0
+   21                           Brunei_Darussalam    0
+   22                                    Bulgaria    2
+   23                                Burkina_Faso    0
+   24                                    Cambodia    0
+   25                                    Cameroon    0
+   26                                      Canada    4
+   27  Cases_on_an_international_conveyance_Japan    7
+   28                    Central_African_Republic    0
+   29                                       Chile    0
+   30                                       China 3226
+   31                                    Colombia    0
+   32                                       Congo    0
+   33                                  Costa_Rica    0
+   34                                Cote_dIvoire    0
+   35                                     Croatia    0
+   36                                        Cuba    0
+   37                                      Cyprus    0
+   38                              Czech_Republic    0
+   39            Democratic_Republic_of_the_Congo    0
+   40                                     Denmark    1
+   41                          Dominican_Republic    0
+   42                                     Ecuador    2
+   43                                       Egypt    2
+   44                           Equatorial_Guinea    0
+   45                                     Estonia    0
+   46                                    Eswatini    0
+   47                                    Ethiopia    0
+   48                                     Finland    0
+   49                                      France  148
+   50                                       Gabon    0
+   51                                     Georgia    0
+   52                                     Germany   13
+   53                                       Ghana    0
+   54                                      Greece    4
+   55                                   Guatemala    1
+   56                                      Guinea    0
+   57                                      Guyana    1
+   58                                    Holy_See    0
+   59                                    Honduras    0
+   60                                     Hungary    1
+   61                                     Iceland    0
+   62                                       India    3
+   63                                   Indonesia    5
+   64                                        Iran  853
+   65                                        Iraq    9
+   66                                     Ireland    2
+   67                                      Israel    0
+   68                                       Italy 2158
+   69                                     Jamaica    0
+   70                                       Japan   28
+   71                                      Jordan    0
+   72                                  Kazakhstan    0
+   73                                       Kenya    0
+   74                                      Kosovo    0
+   75                                      Kuwait    0
+   76                                      Latvia    0
+   77                                     Lebanon    3
+   78                                     Liberia    0
+   79                               Liechtenstein    0
+   80                                   Lithuania    0
+   81                                  Luxembourg    1
+   82                                    Malaysia    0
+   83                                    Maldives    0
+   84                                       Malta    0
+   85                                  Mauritania    0
+   86                                      Mexico    0
+   87                                     Moldova    0
+   88                                      Monaco    0
+   89                                    Mongolia    0
+   90                                     Morocco    1
+   91                                     Myanmar    0
+   92                                     Namibia    0
+   93                                       Nepal    0
+   94                                 Netherlands   24
+   95                                 New_Zealand    0
+   96                                     Nigeria    0
+   97                             North_Macedonia    0
+   98                                      Norway    3
+   99                                        Oman    0
+   100                                   Pakistan    0
+   101                                  Palestine    0
+   102                                     Panama    1
+   103                                   Paraguay    0
+   104                                       Peru    0
+   105                                Philippines   12
+   106                                     Poland    4
+   107                                   Portugal    0
+   108                                      Qatar    0
+   109                                    Romania    0
+   110                                     Russia    0
+   111                                     Rwanda    0
+   112                                Saint_Lucia    0
+   113           Saint_Vincent_and_the_Grenadines    0
+   114                                 San_Marino    9
+   115                               Saudi_Arabia    0
+   116                                    Senegal    0
+   117                                     Serbia    0
+   118                                 Seychelles    0
+   119                                  Singapore    0
+   120                                   Slovakia    0
+   121                                   Slovenia    0
+   122                                    Somalia    0
+   123                               South_Africa    0
+   124                                South_Korea   81
+   125                                      Spain  309
+   126                                  Sri_Lanka    0
+   127                                      Sudan    1
+   128                                   Suriname    0
+   129                                     Sweden    7
+   130                                Switzerland   14
+   131                                     Taiwan    1
+   132                                   Thailand    1
+   133                                       Togo    0
+   134                        Trinidad_and_Tobago    0
+   135                                    Tunisia    0
+   136                                     Turkey    0
+   137                                    Ukraine    0
+   138                       United_Arab_Emirates    0
+   139                             United_Kingdom   55
+   140                United_Republic_of_Tanzania    0
+   141                   United_States_of_America   85
+   142                                    Uruguay    0
+   143                                 Uzbekistan    0
+   144                                  Venezuela    0
+   145                                    Vietnam    0
 
 ```
 
@@ -881,152 +880,152 @@ Após isso, podemos calcular a taxa de mortalidade por meio de um loop 'for', e 
 
    TaxaDeMortalidade
 
-   #                                                Auxiliar              
-   # [1,] "Afghanistan"                                "0"                   
-   # [2,] "Albania"                                    "0.00034935388745285" 
-   # [3,] "Algeria"                                    "9.30232558139535e-05"
-   # [4,] "Andorra"                                    "0"                   
-   # [5,] "Antigua_and_Barbuda"                        "0"                   
-   # [6,] "Argentina"                                  "4.45050583559226e-05"
-   # [7,] "Armenia"                                    "0"                   
-   # [8,] "Australia"                                  "0.000194885578778987"
-   # [9,] "Austria"                                    "0.000336980208029115"
-   # [10,] "Azerbaijan"                                 "0"                   
-   # [11,] "Bahamas"                                    "0"                   
-   # [12,] "Bahrain"                                    "0.000647962159009914"
-   # [13,] "Bangladesh"                                 "0"                   
-   # [14,] "Belarus"                                    "0"                   
-   # [15,] "Belgium"                                    "0.000433860033629359"
-   # [16,] "Benin"                                      "0"                   
-   # [17,] "Bhutan"                                     "0"                   
-   # [18,] "Bolivia"                                    "0"                   
-   # [19,] "Bosnia_and_Herzegovina"                     "0"                   
-   # [20,] "Brazil"                                     "0"                   
-   # [21,] "Brunei_Darussalam"                          "0"                   
-   # [22,] "Bulgaria"                                   "0.00028571269388642" 
-   # [23,] "Burkina_Faso"                               "0"                   
-   # [24,] "Cambodia"                                   "0"                   
-   # [25,] "Cameroon"                                   "0"                   
-   # [26,] "Canada"                                     "0.000105350304775798"
-   # [27,] "Cases_on_an_international_conveyance_Japan" "0.10636196496133"    
-   # [28,] "Central_African_Republic"                   "0"                   
-   # [29,] "Chile"                                      "0"                   
-   # [30,] "China"                                      "0.00230116356131325" 
-   # [31,] "Colombia"                                   "0"                   
-   # [32,] "Congo"                                      "0"                   
-   # [33,] "Cote_dIvoire"                               "0"                   
-   # [34,] "Costa_Rica"                                 "0"                   
-   # [35,] "Croatia"                                    "0"                   
-   # [36,] "Cuba"                                       "0"                   
-   # [37,] "Cyprus"                                     "0"                   
-   # [38,] "Czech_Republic"                             "0"                   
-   # [39,] "Denmark"                                    "0"                   
-   # [40,] "Dominican_Republic"                         "9.65407517821423e-05"
-   # [41,] "Democratic_Republic_of_the_Congo"           "0"                   
-   # [42,] "Ecuador"                                    "0.000114608977091958"
-   # [43,] "Egypt"                                      "1.99677435081047e-05"
-   # [44,] "Equatorial_Guinea"                          "0"                   
-   # [45,] "Estonia"                                    "0"                   
-   # [46,] "Eswatini"                                   "0"                   
-   # [47,] "Ethiopia"                                   "0"                   
-   # [48,] "Finland"                                    "0"                   
-   # [49,] "France"                                     "0.00220668267008603" 
-   # [50,] "Gabon"                                      "0"                   
-   # [51,] "Georgia"                                    "0"                   
-   # [52,] "Germany"                                    "0.000156345272900674"
-   # [53,] "Ghana"                                      "0"                   
-   # [54,] "Greece"                                     "0.000372974318200615"
-   # [55,] "Guatemala"                                  "6.0226357149766e-05" 
-   # [56,] "Guinea"                                     "0"                   
-   # [57,] "Guyana"                                     "0.00127752099605757" 
-   # [58,] "Holy_See"                                   "0"                   
-   # [59,] "Honduras"                                   "0"                   
-   # [60,] "Hungary"                                    "0.000102325280606617"
-   # [61,] "Iceland"                                    "0"                   
-   # [62,] "India"                                      "2.20559906806734e-06"
-   # [63,] "Indonesia"                                  "1.8732772873746e-05" 
-   # [64,] "Iran"                                       "0.01023929582454"    
-   # [65,] "Iraq"                                       "0.000230014899854068"
-   # [66,] "Ireland"                                    "0.00040638016864777" 
-   # [67,] "Israel"                                     "0"                   
-   # [68,] "Italy"                                      "0.035821347816888"   
-   # [69,] "Jamaica"                                    "0"                   
-   # [70,] "Japan"                                      "0.000222310440651052"
-   # [71,] "Jordan"                                     "0"                   
-   # [72,] "Kazakhstan"                                 "0"                   
-   # [73,] "Kenya"                                      "0"                   
-   # [74,] "Kosovo"                                     "0"                   
-   # [75,] "Kuwait"                                     "0"                   
-   # [76,] "Latvia"                                     "0"                   
-   # [77,] "Lebanon"                                    "0.000439531974632559"
-   # [78,] "Liberia"                                    "0"                   
-   # [79,] "Liechtenstein"                              "0"                   
-   # [80,] "Lithuania"                                  "0"                   
-   # [81,] "Luxembourg"                                 "0.00162894571375514" 
-   # [82,] "Malaysia"                                   "0"                   
-   # [83,] "Maldives"                                   "0"                   
-   # [84,] "Malta"                                      "0"                   
-   # [85,] "Mauritania"                                 "0"                   
-   # [86,] "Mexico"                                     "0"                   
-   # [87,] "Moldova"                                    "0"                   
-   # [88,] "Monaco"                                     "0"                   
-   # [89,] "Mongolia"                                   "0"                   
-   # [90,] "Morocco"                                    "2.78955403511223e-05"
-   # [91,] "Myanmar"                                    "0"                   
-   # [92,] "Namibia"                                    "0"                   
-   # [93,] "Nepal"                                      "0"                   
-   # [94,] "Netherlands"                                "0.00137552519987957" 
-   # [95,] "New_Zealand"                                "0"                   
-   # [96,] "Nigeria"                                    "0"                   
-   # [97,] "North_Macedonia"                            "0"                   
-   # [98,] "Norway"                                     "0.000558911092149535"
-   # [99,] "Oman"                                       "0"                   
-   # [100,] "Pakistan"                                   "0"                   
-   # [101,] "Palestine"                                  "0"                   
-   # [102,] "Panama"                                     "0.000237033778261537"
-   # [103,] "Paraguay"                                   "0"                   
-   # [104,] "Peru"                                       "0"                   
-   # [105,] "Philippines"                                "0.00011065325356205" 
-   # [106,] "Poland"                                     "0.00010420465794821" 
-   # [107,] "Portugal"                                   "0"                   
-   # [108,] "Qatar"                                      "0"                   
-   # [109,] "Romania"                                    "0"                   
-   # [110,] "Russia"                                     "0"                   
-   # [111,] "Rwanda"                                     "0"                   
-   # [112,] "Saint_Lucia"                                "0"                   
-   # [113,] "Saint_Vincent_and_the_Grenadines"           "0"                   
-   # [114,] "San_Marino"                                 "0.268064573777328"   
-   # [115,] "Saudi_Arabia"                               "0"                   
-   # [116,] "Senegal"                                    "0"                   
-   # [117,] "Serbia"                                     "0"                   
-   # [118,] "Seychelles"                                 "0"                   
-   # [119,] "Singapore"                                  "0"                   
-   # [120,] "Slovakia"                                   "0"                   
-   # [121,] "Slovenia"                                   "0"                   
-   # [122,] "Somalia"                                    "0"                   
-   # [123,] "South_Africa"                               "0"                   
-   # [124,] "South_Korea"                                "0.00156429305280654" 
-   # [125,] "Spain"                                      "0.0065604543961796"  
-   # [126,] "Sri_Lanka"                                  "0"                   
-   # [127,] "Sudan"                                      "2.36019252090393e-05"
-   # [128,] "Suriname"                                   "0"                   
-   # [129,] "Sweden"                                     "0.000677411313310861"
-   # [130,] "Switzerland"                                "0.00163045693555619" 
-   # [131,] "Taiwan"                                     "4.23652250980914e-05"
-   # [132,] "United_Republic_of_Tanzania"                "1.78920492867988e-05"
-   # [133,] "Thailand"                                   "0"                   
-   # [134,] "Togo"                                       "0"                   
-   # [135,] "Trinidad_and_Tobago"                        "0"                   
-   # [136,] "Tunisia"                                    "0"                   
-   # [137,] "Turkey"                                     "0"                   
-   # [138,] "Ukraine"                                    "0"                   
-   # [139,] "United_Arab_Emirates"                       "0.00556094798997007" 
-   # [140,] "United_Kingdom"                             "0"                   
-   # [141,] "United_States_of_America"                   "0.000257962617860123"
-   # [142,] "Uruguay"                                    "0"                   
-   # [143,] "Uzbekistan"                                 "0"                   
-   # [144,] "Venezuela"                                  "0"                   
-   # [145,] "Vietnam"                                    "0"  
+                                                  Auxiliar              
+   [1,] "Afghanistan"                                "0"                   
+   [2,] "Albania"                                    "0.00034935388745285" 
+   [3,] "Algeria"                                    "9.30232558139535e-05"
+   [4,] "Andorra"                                    "0"                   
+   [5,] "Antigua_and_Barbuda"                        "0"                   
+   [6,] "Argentina"                                  "4.45050583559226e-05"
+   [7,] "Armenia"                                    "0"                   
+   [8,] "Australia"                                  "0.000194885578778987"
+   [9,] "Austria"                                    "0.000336980208029115"
+   [10,] "Azerbaijan"                                 "0"                   
+   [11,] "Bahamas"                                    "0"                   
+   [12,] "Bahrain"                                    "0.000647962159009914"
+   [13,] "Bangladesh"                                 "0"                   
+   [14,] "Belarus"                                    "0"                   
+   [15,] "Belgium"                                    "0.000433860033629359"
+   [16,] "Benin"                                      "0"                   
+   [17,] "Bhutan"                                     "0"                   
+   [18,] "Bolivia"                                    "0"                   
+   [19,] "Bosnia_and_Herzegovina"                     "0"                   
+   [20,] "Brazil"                                     "0"                   
+   [21,] "Brunei_Darussalam"                          "0"                   
+   [22,] "Bulgaria"                                   "0.00028571269388642" 
+   [23,] "Burkina_Faso"                               "0"                   
+   [24,] "Cambodia"                                   "0"                   
+   [25,] "Cameroon"                                   "0"                   
+   [26,] "Canada"                                     "0.000105350304775798"
+   [27,] "Cases_on_an_international_conveyance_Japan" "0.10636196496133"    
+   [28,] "Central_African_Republic"                   "0"                   
+   [29,] "Chile"                                      "0"                   
+   [30,] "China"                                      "0.00230116356131325" 
+   [31,] "Colombia"                                   "0"                   
+   [32,] "Congo"                                      "0"                   
+   [33,] "Cote_dIvoire"                               "0"                   
+   [34,] "Costa_Rica"                                 "0"                   
+   [35,] "Croatia"                                    "0"                   
+   [36,] "Cuba"                                       "0"                   
+   [37,] "Cyprus"                                     "0"                   
+   [38,] "Czech_Republic"                             "0"                   
+   [39,] "Denmark"                                    "0"                   
+   [40,] "Dominican_Republic"                         "9.65407517821423e-05"
+   [41,] "Democratic_Republic_of_the_Congo"           "0"                   
+   [42,] "Ecuador"                                    "0.000114608977091958"
+   [43,] "Egypt"                                      "1.99677435081047e-05"
+   [44,] "Equatorial_Guinea"                          "0"                   
+   [45,] "Estonia"                                    "0"                   
+   [46,] "Eswatini"                                   "0"                   
+   [47,] "Ethiopia"                                   "0"                   
+   [48,] "Finland"                                    "0"                   
+   [49,] "France"                                     "0.00220668267008603" 
+   [50,] "Gabon"                                      "0"                   
+   [51,] "Georgia"                                    "0"                   
+   [52,] "Germany"                                    "0.000156345272900674"
+   [53,] "Ghana"                                      "0"                   
+   [54,] "Greece"                                     "0.000372974318200615"
+   [55,] "Guatemala"                                  "6.0226357149766e-05" 
+   [56,] "Guinea"                                     "0"                   
+   [57,] "Guyana"                                     "0.00127752099605757" 
+   [58,] "Holy_See"                                   "0"                   
+   [59,] "Honduras"                                   "0"                   
+   [60,] "Hungary"                                    "0.000102325280606617"
+   [61,] "Iceland"                                    "0"                   
+   [62,] "India"                                      "2.20559906806734e-06"
+   [63,] "Indonesia"                                  "1.8732772873746e-05" 
+   [64,] "Iran"                                       "0.01023929582454"    
+   [65,] "Iraq"                                       "0.000230014899854068"
+   [66,] "Ireland"                                    "0.00040638016864777" 
+   [67,] "Israel"                                     "0"                   
+   [68,] "Italy"                                      "0.035821347816888"   
+   [69,] "Jamaica"                                    "0"                   
+   [70,] "Japan"                                      "0.000222310440651052"
+   [71,] "Jordan"                                     "0"                   
+   [72,] "Kazakhstan"                                 "0"                   
+   [73,] "Kenya"                                      "0"                   
+   [74,] "Kosovo"                                     "0"                   
+   [75,] "Kuwait"                                     "0"                   
+   [76,] "Latvia"                                     "0"                   
+   [77,] "Lebanon"                                    "0.000439531974632559"
+   [78,] "Liberia"                                    "0"                   
+   [79,] "Liechtenstein"                              "0"                   
+   [80,] "Lithuania"                                  "0"                   
+   [81,] "Luxembourg"                                 "0.00162894571375514" 
+   [82,] "Malaysia"                                   "0"                   
+   [83,] "Maldives"                                   "0"                   
+   [84,] "Malta"                                      "0"                   
+   [85,] "Mauritania"                                 "0"                   
+   [86,] "Mexico"                                     "0"                   
+   [87,] "Moldova"                                    "0"                   
+   [88,] "Monaco"                                     "0"                   
+   [89,] "Mongolia"                                   "0"                   
+   [90,] "Morocco"                                    "2.78955403511223e-05"
+   [91,] "Myanmar"                                    "0"                   
+   [92,] "Namibia"                                    "0"                   
+   [93,] "Nepal"                                      "0"                   
+   [94,] "Netherlands"                                "0.00137552519987957" 
+   [95,] "New_Zealand"                                "0"                   
+   [96,] "Nigeria"                                    "0"                   
+   [97,] "North_Macedonia"                            "0"                   
+   [98,] "Norway"                                     "0.000558911092149535"
+   [99,] "Oman"                                       "0"                   
+   [100,] "Pakistan"                                   "0"                   
+   [101,] "Palestine"                                  "0"                   
+   [102,] "Panama"                                     "0.000237033778261537"
+   [103,] "Paraguay"                                   "0"                   
+   [104,] "Peru"                                       "0"                   
+   [105,] "Philippines"                                "0.00011065325356205" 
+   [106,] "Poland"                                     "0.00010420465794821" 
+   [107,] "Portugal"                                   "0"                   
+   [108,] "Qatar"                                      "0"                   
+   [109,] "Romania"                                    "0"                   
+   [110,] "Russia"                                     "0"                   
+   [111,] "Rwanda"                                     "0"                   
+   [112,] "Saint_Lucia"                                "0"                   
+   [113,] "Saint_Vincent_and_the_Grenadines"           "0"                   
+   [114,] "San_Marino"                                 "0.268064573777328"   
+   [115,] "Saudi_Arabia"                               "0"                   
+   [116,] "Senegal"                                    "0"                   
+   [117,] "Serbia"                                     "0"                   
+   [118,] "Seychelles"                                 "0"                   
+   [119,] "Singapore"                                  "0"                   
+   [120,] "Slovakia"                                   "0"                   
+   [121,] "Slovenia"                                   "0"                   
+   [122,] "Somalia"                                    "0"                   
+   [123,] "South_Africa"                               "0"                   
+   [124,] "South_Korea"                                "0.00156429305280654" 
+   [125,] "Spain"                                      "0.0065604543961796"  
+   [126,] "Sri_Lanka"                                  "0"                   
+   [127,] "Sudan"                                      "2.36019252090393e-05"
+   [128,] "Suriname"                                   "0"                   
+   [129,] "Sweden"                                     "0.000677411313310861"
+   [130,] "Switzerland"                                "0.00163045693555619" 
+   [131,] "Taiwan"                                     "4.23652250980914e-05"
+   [132,] "United_Republic_of_Tanzania"                "1.78920492867988e-05"
+   [133,] "Thailand"                                   "0"                   
+   [134,] "Togo"                                       "0"                   
+   [135,] "Trinidad_and_Tobago"                        "0"                   
+   [136,] "Tunisia"                                    "0"                   
+   [137,] "Turkey"                                     "0"                   
+   [138,] "Ukraine"                                    "0"                   
+   [139,] "United_Arab_Emirates"                       "0.00556094798997007" 
+   [140,] "United_Kingdom"                             "0"                   
+   [141,] "United_States_of_America"                   "0.000257962617860123"
+   [142,] "Uruguay"                                    "0"                   
+   [143,] "Uzbekistan"                                 "0"                   
+   [144,] "Venezuela"                                  "0"                   
+   [145,] "Vietnam"                                    "0"  
    
 ```
 
@@ -1057,221 +1056,221 @@ Importando a tabela IdadeMedia utilizada antes, podemos extrair os valores neces
    IdadePorPais <- data.frame(IdadeMedia$`Countries and territories`, IdadeMedia$Median)
    IdadePorPais
 
-   #                   IdadeMedia..Countries.and.territories.   IdadeMedia.Median
-   # 1                                       Monaco              53.1
-   # 2                                        Japan              47.3
-   # 3                                      Germany              47.1
-   # 4                    Saint Pierre and Miquelon              46.5
-   # 5                                        Italy              45.5
-   # 6                                       Greece              44.5
-   # 7                                     Slovenia              44.5
-   # 8                                    Hong Kong              44.4
-   # 9                                   San_Marino              44.4
-   # 10                                     Andorra              44.3
-   # 11                                 Isle of Man              44.2
-   # 12                                     Austria              44.0
-   # 13                                    Guernsey              43.8
-   # 14                                   Lithuania              43.7
-   # 15                                      Latvia              43.6
-   # 16                                     Bahrain              43.4
-   # 17                               Liechtenstein              43.2
-   # 18                                     Croatia              43.0
-   # 19                                    Bulgaria              42.7
-   # 20                                     Estonia              42.7
-   # 21                                       Spain              42.7
-   # 22                                 Netherlands              42.6
-   # 23                                      Serbia              42.6
-   # 24                                     Finland              42.5
-   # 25                                 Switzerland              42.4
-   # 26                                     Hungary              42.3
-   # 27                                      Canada              42.2
-   # 28                                     Denmark              42.2
-   # 29                                    Portugal              42.2
-   # 30                      Bosnia_and_Herzegovina              42.1
-   # 31                              Czech_Republic              42.1
-   # 32                                       Malta              41.8
-   # 33                                 South_Korea              41.8
-   # 34                                        Cuba              41.5
-   # 35                                 Puerto Rico              41.5
-   # 36                                     Belgium              41.4
-   # 37                                      France              41.4
-   # 38                                      Sweden              41.2
-   # 39                                     Romania              41.1
-   # 40                                Sint Maarten              41.0
-   # 41                                  Montenegro              40.7
-   # 42                                      Poland              40.7
-   # 43                                      Taiwan              40.7
-   # 44                                     Ukraine              40.6
-   # 45                                    Slovakia              40.5
-   # 46                              United_Kingdom              40.5
-   # 47                                     Belarus              40.0
-   # 48  Cases_on_an_international_conveyance_Japan              40.0
-   # 49                                      Russia              39.6
-   # 50                                       Aruba              39.3
-   # 51                                  Luxembourg              39.3
-   # 52                                       Macau              39.3
-   # 53                                      Norway              39.2
-   # 54                                   Australia              38.7
-   # 55                                    Barbados              38.6
-   # 56                                     Georgia              38.1
-   # 57                    United_States_of_America              38.1
-   # 58                                      Jersey              38.0
-   # 59                                   Macedonia              37.9
-   # 60                                 New_Zealand              37.9
-   # 61                                    Thailand              37.7
-   # 62                               Faroe Islands              37.6
-   # 63                                       China              37.4
-   # 64                                      Cyprus              36.8
-   # 65                                     Ireland              36.8
-   # 66                                     Moldova              36.7
-   # 67                      British Virgin Islands              36.5
-   # 68                                Cote_dIvoire              36.5
-   # 69                                     Iceland              36.5
-   # 70                         Trinidad_and_Tobago              36.0
-   # 71                                  Seychelles              35.4
-   # 72                                   Mauritius              35.3
-   # 73                                     Armenia              35.1
-   # 74                       Saint Kitts and Nevis              35.0
-   # 75                                     Uruguay              35.0
-   # 76                                    Anguilla              34.8
-   # 77                                 Saint_Lucia              34.8
-   # 78                                   Gibraltar              34.7
-   # 79                                   Singapore              34.6
-   # 80                                       Chile              34.4
-   # 81                                 North Korea              34.0
-   # 82                                   Greenland              33.9
-   # 83                             North_Macedonia              33.6
-   # 84            Saint_Vincent_and_the_Grenadines              33.6
-   # 85                                    Dominica              33.5
-   # 86                                   Palestine              33.4
-   # 87                    Turks and Caicos Islands              33.3
-   # 88                                  Montserrat              33.2
-   # 89                                       Qatar              33.2
-   # 90                                     Albania              32.9
-   # 91                                   Sri_Lanka              32.8
-   # 92                                Saint Martin              32.5
-   # 93                                     Bahamas              32.3
-   # 94                           Wallis and Futuna              32.2
-   # 95                                      Brazil              32.0
-   # 96                               New Caledonia              32.0
-   # 97                         Antigua_and_Barbuda              31.9
-   # 98                            French Polynesia              31.9
-   # 99                                   Argentina              31.7
-   # 100                                    Tunisia              31.6
-   # 101                                    Grenada              31.5
-   # 102                                 Azerbaijan              31.3
-   # 103                                 Costa_Rica              31.3
-   # 104                                     Turkey              30.9
-   # 105                                 Kazakhstan              30.6
-   # 106                                    Lebanon              30.5
-   # 107                                    Vietnam              30.5
-   # 108                                       Iran              30.3
-   # 109                       United_Arab_Emirates              30.3
-   # 110                          Brunei_Darussalam              30.2
-   # 111                                  Indonesia              30.2
-   # 112                                   Colombia              30.0
-   # 113                                     Israel              29.9
-   # 114                                   Suriname              29.8
-   # 115                                     Kuwait              29.3
-   # 116                                    Morocco              29.3
-   # 117                                     Panama              29.2
-   # 118                                       Guam              29.0
-   # 119                                       Fiji              28.9
-   # 120                                      Libya              28.9
-   # 121                                 Uzbekistan              28.6
-   # 122                                   Malaysia              28.5
-   # 123                                     Mexico              28.3
-   # 124                                   Mongolia              28.3
-   # 125                                  Venezuela              28.3
-   # 126                                   Maldives              28.2
-   # 127                                   Paraguay              28.2
-   # 128                                    Algeria              28.1
-   # 129                         Dominican_Republic              28.1
-   # 130                                       Peru              28.0
-   # 131                                      India              27.9
-   # 132                               Turkmenistan              27.9
-   # 133                                    Ecuador              27.7
-   # 134                                     Bhutan              27.6
-   # 135                               Saudi_Arabia              27.5
-   # 136                                El Salvador              27.1
-   # 137                               South_Africa              27.1
-   # 138                                 Bangladesh              26.7
-   # 139                                 Kyrgyzstan              26.5
-   # 140                                      Nauru              26.4
-   # 141                                     Guyana              26.2
-   # 142                                    Jamaica              26.0
-   # 143                                  Nicaragua              25.7
-   # 144                                     Tuvalu              25.7
-   # 145                                       Oman              25.6
-   # 146                             American Samoa              25.5
-   # 147                                   Cambodia              25.3
-   # 148                                     Kosovo              24.6
-   # 149                                   Botswana              24.5
-   # 150                                 Tajikistan              24.5
-   # 151                                      Samoa              24.4
-   # 152                                    Bolivia              24.3
-   # 153                                      Syria              24.3
-   # 154                                    Lesotho              24.2
-   # 155                                      Nepal              24.1
-   # 156           Democratic_Republic_of_the_Congo              23.9
-   # 157                                      Egypt              23.9
-   # 158                                   Pakistan              23.8
-   # 159                                Philippines              23.5
-   # 160                           Papua New Guinea              23.1
-   # 161                                   Holy_See              23.0
-   # 162                                   Honduras              23.0
-   # 163                                       Laos              23.0
-   # 164                                      Tonga              23.0
-   # 165                           Marshall Islands              22.9
-   # 166                                     Belize              22.7
-   # 167                                     Jordan              22.5
-   # 168                            Solomon Islands              22.5
-   # 169                                  Guatemala              22.1
-   # 170                                    Vanuatu              22.0
-   # 171                                  Swaziland              21.7
-   # 172                                    Namibia              21.2
-   # 173                                      Ghana              21.1
-   # 174                             Western Sahara              21.1
-   # 175                                 Mauritania              20.5
-   # 176                              Guinea-Bissau              20.1
-   # 177                                       Iraq              20.0
-   # 178                                   Zimbabwe              20.0
-   # 179                                    Comoros              19.9
-   # 180                                      Sudan              19.9
-   # 181                          Equatorial_Guinea              19.8
-   # 182                                       Togo              19.8
-   # 183                   Central_African_Republic              19.7
-   # 184                                      Congo              19.7
-   # 185                                   Eswatini              19.7
-   # 186                                      Kenya              19.7
-   # 187                                 Madagascar              19.7
-   # 188                                      Yemen              19.5
-   # 189                                     Rwanda              19.0
-   # 190                               Sierra Leone              19.0
-   # 191                                     Guinea              18.9
-   # 192                                Timor-Leste              18.9
-   # 193                                Afghanistan              18.8
-   # 194                                    Senegal              18.8
-   # 195                                      Gabon              18.6
-   # 196                                   Cameroon              18.5
-   # 197                                    Nigeria              18.4
-   # 198                      Sao Tome and Principe              18.4
-   # 199                                      Benin              18.2
-   # 200                                    Somalia              18.1
-   # 201                                   Ethiopia              17.9
-   # 202                                       Chad              17.8
-   # 203                                    Liberia              17.8
-   # 204                United_Republic_of_Tanzania              17.7
-   # 205                               Burkina_Faso              17.3
-   # 206                                South Sudan              17.3
-   # 207                                    Myanmar              17.2
-   # 208                                    Burundi              17.0
-   # 209                                     Zambia              16.8
-   # 210                                     Malawi              16.5
-   # 211                                     Angola              15.9
-   # 212                                       Mali              15.8
-   # 213                                     Uganda              15.8
-   # 214                                      Niger              15.4
+                     IdadeMedia..Countries.and.territories.   IdadeMedia.Median
+   1                                       Monaco              53.1
+   2                                        Japan              47.3
+   3                                      Germany              47.1
+   4                    Saint Pierre and Miquelon              46.5
+   5                                        Italy              45.5
+   6                                       Greece              44.5
+   7                                     Slovenia              44.5
+   8                                    Hong Kong              44.4
+   9                                   San_Marino              44.4
+   10                                     Andorra              44.3
+   11                                 Isle of Man              44.2
+   12                                     Austria              44.0
+   13                                    Guernsey              43.8
+   14                                   Lithuania              43.7
+   15                                      Latvia              43.6
+   16                                     Bahrain              43.4
+   17                               Liechtenstein              43.2
+   18                                     Croatia              43.0
+   19                                    Bulgaria              42.7
+   20                                     Estonia              42.7
+   21                                       Spain              42.7
+   22                                 Netherlands              42.6
+   23                                      Serbia              42.6
+   24                                     Finland              42.5
+   25                                 Switzerland              42.4
+   26                                     Hungary              42.3
+   27                                      Canada              42.2
+   28                                     Denmark              42.2
+   29                                    Portugal              42.2
+   30                      Bosnia_and_Herzegovina              42.1
+   31                              Czech_Republic              42.1
+   32                                       Malta              41.8
+   33                                 South_Korea              41.8
+   34                                        Cuba              41.5
+   35                                 Puerto Rico              41.5
+   36                                     Belgium              41.4
+   37                                      France              41.4
+   38                                      Sweden              41.2
+   39                                     Romania              41.1
+   40                                Sint Maarten              41.0
+   41                                  Montenegro              40.7
+   42                                      Poland              40.7
+   43                                      Taiwan              40.7
+   44                                     Ukraine              40.6
+   45                                    Slovakia              40.5
+   46                              United_Kingdom              40.5
+   47                                     Belarus              40.0
+   48  Cases_on_an_international_conveyance_Japan              40.0
+   49                                      Russia              39.6
+   50                                       Aruba              39.3
+   51                                  Luxembourg              39.3
+   52                                       Macau              39.3
+   53                                      Norway              39.2
+   54                                   Australia              38.7
+   55                                    Barbados              38.6
+   56                                     Georgia              38.1
+   57                    United_States_of_America              38.1
+   58                                      Jersey              38.0
+   59                                   Macedonia              37.9
+   60                                 New_Zealand              37.9
+   61                                    Thailand              37.7
+   62                               Faroe Islands              37.6
+   63                                       China              37.4
+   64                                      Cyprus              36.8
+   65                                     Ireland              36.8
+   66                                     Moldova              36.7
+   67                      British Virgin Islands              36.5
+   68                                Cote_dIvoire              36.5
+   69                                     Iceland              36.5
+   70                         Trinidad_and_Tobago              36.0
+   71                                  Seychelles              35.4
+   72                                   Mauritius              35.3
+   73                                     Armenia              35.1
+   74                       Saint Kitts and Nevis              35.0
+   75                                     Uruguay              35.0
+   76                                    Anguilla              34.8
+   77                                 Saint_Lucia              34.8
+   78                                   Gibraltar              34.7
+   79                                   Singapore              34.6
+   80                                       Chile              34.4
+   81                                 North Korea              34.0
+   82                                   Greenland              33.9
+   83                             North_Macedonia              33.6
+   84            Saint_Vincent_and_the_Grenadines              33.6
+   85                                    Dominica              33.5
+   86                                   Palestine              33.4
+   87                    Turks and Caicos Islands              33.3
+   88                                  Montserrat              33.2
+   89                                       Qatar              33.2
+   90                                     Albania              32.9
+   91                                   Sri_Lanka              32.8
+   92                                Saint Martin              32.5
+   93                                     Bahamas              32.3
+   94                           Wallis and Futuna              32.2
+   95                                      Brazil              32.0
+   96                               New Caledonia              32.0
+   97                         Antigua_and_Barbuda              31.9
+   98                            French Polynesia              31.9
+   99                                   Argentina              31.7
+   100                                    Tunisia              31.6
+   101                                    Grenada              31.5
+   102                                 Azerbaijan              31.3
+   103                                 Costa_Rica              31.3
+   104                                     Turkey              30.9
+   105                                 Kazakhstan              30.6
+   106                                    Lebanon              30.5
+   107                                    Vietnam              30.5
+   108                                       Iran              30.3
+   109                       United_Arab_Emirates              30.3
+   110                          Brunei_Darussalam              30.2
+   111                                  Indonesia              30.2
+   112                                   Colombia              30.0
+   113                                     Israel              29.9
+   114                                   Suriname              29.8
+   115                                     Kuwait              29.3
+   116                                    Morocco              29.3
+   117                                     Panama              29.2
+   118                                       Guam              29.0
+   119                                       Fiji              28.9
+   120                                      Libya              28.9
+   121                                 Uzbekistan              28.6
+   122                                   Malaysia              28.5
+   123                                     Mexico              28.3
+   124                                   Mongolia              28.3
+   125                                  Venezuela              28.3
+   126                                   Maldives              28.2
+   127                                   Paraguay              28.2
+   128                                    Algeria              28.1
+   129                         Dominican_Republic              28.1
+   130                                       Peru              28.0
+   131                                      India              27.9
+   132                               Turkmenistan              27.9
+   133                                    Ecuador              27.7
+   134                                     Bhutan              27.6
+   135                               Saudi_Arabia              27.5
+   136                                El Salvador              27.1
+   137                               South_Africa              27.1
+   138                                 Bangladesh              26.7
+   139                                 Kyrgyzstan              26.5
+   140                                      Nauru              26.4
+   141                                     Guyana              26.2
+   142                                    Jamaica              26.0
+   143                                  Nicaragua              25.7
+   144                                     Tuvalu              25.7
+   145                                       Oman              25.6
+   146                             American Samoa              25.5
+   147                                   Cambodia              25.3
+   148                                     Kosovo              24.6
+   149                                   Botswana              24.5
+   150                                 Tajikistan              24.5
+   151                                      Samoa              24.4
+   152                                    Bolivia              24.3
+   153                                      Syria              24.3
+   154                                    Lesotho              24.2
+   155                                      Nepal              24.1
+   156           Democratic_Republic_of_the_Congo              23.9
+   157                                      Egypt              23.9
+   158                                   Pakistan              23.8
+   159                                Philippines              23.5
+   160                           Papua New Guinea              23.1
+   161                                   Holy_See              23.0
+   162                                   Honduras              23.0
+   163                                       Laos              23.0
+   164                                      Tonga              23.0
+   165                           Marshall Islands              22.9
+   166                                     Belize              22.7
+   167                                     Jordan              22.5
+   168                            Solomon Islands              22.5
+   169                                  Guatemala              22.1
+   170                                    Vanuatu              22.0
+   171                                  Swaziland              21.7
+   172                                    Namibia              21.2
+   173                                      Ghana              21.1
+   174                             Western Sahara              21.1
+   175                                 Mauritania              20.5
+   176                              Guinea-Bissau              20.1
+   177                                       Iraq              20.0
+   178                                   Zimbabwe              20.0
+   179                                    Comoros              19.9
+   180                                      Sudan              19.9
+   181                          Equatorial_Guinea              19.8
+   182                                       Togo              19.8
+   183                   Central_African_Republic              19.7
+   184                                      Congo              19.7
+   185                                   Eswatini              19.7
+   186                                      Kenya              19.7
+   187                                 Madagascar              19.7
+   188                                      Yemen              19.5
+   189                                     Rwanda              19.0
+   190                               Sierra Leone              19.0
+   191                                     Guinea              18.9
+   192                                Timor-Leste              18.9
+   193                                Afghanistan              18.8
+   194                                    Senegal              18.8
+   195                                      Gabon              18.6
+   196                                   Cameroon              18.5
+   197                                    Nigeria              18.4
+   198                      Sao Tome and Principe              18.4
+   199                                      Benin              18.2
+   200                                    Somalia              18.1
+   201                                   Ethiopia              17.9
+   202                                       Chad              17.8
+   203                                    Liberia              17.8
+   204                United_Republic_of_Tanzania              17.7
+   205                               Burkina_Faso              17.3
+   206                                South Sudan              17.3
+   207                                    Myanmar              17.2
+   208                                    Burundi              17.0
+   209                                     Zambia              16.8
+   210                                     Malawi              16.5
+   211                                     Angola              15.9
+   212                                       Mali              15.8
+   213                                     Uganda              15.8
+   214                                      Niger              15.4
 ```
 Agora, similarmente ao exercício 2, juntaremos os dados para uma melhor avaliação (e ordenaremos de forma decrescente no quesito mortes por país):
 
@@ -1283,159 +1282,161 @@ Agora, similarmente ao exercício 2, juntaremos os dados para uma melhor avalia�
 
    Juncao
 
-   #                                      Group.1    x          IdadeMedia.Median
-   # 30                                       China 3226              37.4
-   # 68                                       Italy 2158              45.5
-   # 64                                        Iran  853              30.3
-   # 125                                      Spain  309              42.7
-   # 49                                      France  148              41.4
-   # 141                   United_States_of_America   85              38.1
-   # 124                                South_Korea   81              41.8
-   # 139                             United_Kingdom   55              40.5
-   # 70                                       Japan   28              47.3
-   # 94                                 Netherlands   24              42.6
-   # 130                                Switzerland   14              42.4
-   # 52                                     Germany   13              47.1
-   # 105                                Philippines   12              23.5
-   # 65                                        Iraq    9              20.0
-   # 114                                 San_Marino    9              44.4
-   # 27  Cases_on_an_international_conveyance_Japan    7              40.0
-   # 129                                     Sweden    7              41.2
-   # 8                                    Australia    5              38.7
-   # 15                                     Belgium    5              41.4
-   # 63                                   Indonesia    5              30.2
-   # 3                                      Algeria    4              28.1
-   # 26                                      Canada    4              42.2
-   # 54                                      Greece    4              44.5
-   # 106                                     Poland    4              40.7
-   # 9                                      Austria    3              44.0
-   # 62                                       India    3              27.9
-   # 77                                     Lebanon    3              30.5
-   # 98                                      Norway    3              39.2
-   # 6                                    Argentina    2              31.7
-   # 22                                    Bulgaria    2              42.7
-   # 42                                     Ecuador    2              27.7
-   # 43                                       Egypt    2              23.9
-   # 66                                     Ireland    2              36.8
-   # 2                                      Albania    1              32.9
-   # 12                                     Bahrain    1              43.4
-   # 40                                     Denmark    1              42.2
-   # 55                                   Guatemala    1              22.1
-   # 57                                      Guyana    1              26.2
-   # 60                                     Hungary    1              42.3
-   # 81                                  Luxembourg    1              39.3
-   # 90                                     Morocco    1              29.3
-   # 102                                     Panama    1              29.2
-   # 127                                      Sudan    1              19.9
-   # 131                                     Taiwan    1              40.7
-   # 132                                   Thailand    1              37.7
-   # 1                                  Afghanistan    0              18.8
-   # 4                                      Andorra    0              44.3
-   # 5                          Antigua_and_Barbuda    0              31.9
-   # 7                                      Armenia    0              35.1
-   # 10                                  Azerbaijan    0              31.3
-   # 11                                     Bahamas    0              32.3
-   # 13                                  Bangladesh    0              26.7
-   # 14                                     Belarus    0              40.0
-   # 16                                       Benin    0              18.2
-   # 17                                      Bhutan    0              27.6
-   # 18                                     Bolivia    0              24.3
-   # 19                      Bosnia_and_Herzegovina    0              42.1
-   # 20                                      Brazil    0              32.0
-   # 21                           Brunei_Darussalam    0              30.2
-   # 23                                Burkina_Faso    0              17.3
-   # 24                                    Cambodia    0              25.3
-   # 25                                    Cameroon    0              18.5
-   # 28                    Central_African_Republic    0              19.7
-   # 29                                       Chile    0              34.4
-   # 31                                    Colombia    0              30.0
-   # 32                                       Congo    0              19.7
-   # 33                                  Costa_Rica    0              31.3
-   # 34                                Cote_dIvoire    0              36.5
-   # 35                                     Croatia    0              43.0
-   # 36                                        Cuba    0              41.5
-   # 37                                      Cyprus    0              36.8
-   # 38                              Czech_Republic    0              42.1
-   # 39            Democratic_Republic_of_the_Congo    0              23.9
-   # 41                          Dominican_Republic    0              28.1
-   # 44                           Equatorial_Guinea    0              19.8
-   # 45                                     Estonia    0              42.7
-   # 46                                    Eswatini    0              19.7
-   # 47                                    Ethiopia    0              17.9
-   # 48                                     Finland    0              42.5
-   # 50                                       Gabon    0              18.6
-   # 51                                     Georgia    0              38.1
-   # 53                                       Ghana    0              21.1
-   # 56                                      Guinea    0              18.9
-   # 58                                    Holy_See    0              23.0
-   # 59                                    Honduras    0              23.0
-   # 61                                     Iceland    0              36.5
-   # 67                                      Israel    0              29.9
-   # 69                                     Jamaica    0              26.0
-   # 71                                      Jordan    0              22.5
-   # 72                                  Kazakhstan    0              30.6
-   # 73                                       Kenya    0              19.7
-   # 74                                      Kosovo    0              24.6
-   # 75                                      Kuwait    0              29.3
-   # 76                                      Latvia    0              43.6
-   # 78                                     Liberia    0              17.8
-   # 79                               Liechtenstein    0              43.2
-   # 80                                   Lithuania    0              43.7
-   # 82                                    Malaysia    0              28.5
-   # 83                                    Maldives    0              28.2
-   # 84                                       Malta    0              41.8
-   # 85                                  Mauritania    0              20.5
-   # 86                                      Mexico    0              28.3
-   # 87                                     Moldova    0              36.7
-   # 88                                      Monaco    0              53.1
-   # 89                                    Mongolia    0              28.3
-   # 91                                     Myanmar    0              17.2
-   # 92                                     Namibia    0              21.2
-   # 93                                       Nepal    0              24.1
-   # 95                                 New_Zealand    0              37.9
-   # 96                                     Nigeria    0              18.4
-   # 97                             North_Macedonia    0              33.6
-   # 99                                        Oman    0              25.6
-   # 100                                   Pakistan    0              23.8
-   # 101                                  Palestine    0              33.4
-   # 103                                   Paraguay    0              28.2
-   # 104                                       Peru    0              28.0
-   # 107                                   Portugal    0              42.2
-   # 108                                      Qatar    0              33.2
-   # 109                                    Romania    0              41.1
-   # 110                                     Russia    0              39.6
-   # 111                                     Rwanda    0              19.0
-   # 112                                Saint_Lucia    0              34.8
-   # 113           Saint_Vincent_and_the_Grenadines    0              33.6
-   # 115                               Saudi_Arabia    0              27.5
-   # 116                                    Senegal    0              18.8
-   # 117                                     Serbia    0              42.6
-   # 118                                 Seychelles    0              35.4
-   # 119                                  Singapore    0              34.6
-   # 120                                   Slovakia    0              40.5
-   # 121                                   Slovenia    0              44.5
-   # 122                                    Somalia    0              18.1
-   # 123                               South_Africa    0              27.1
-   # 126                                  Sri_Lanka    0              32.8
-   # 128                                   Suriname    0              29.8
-   # 133                                       Togo    0              19.8
-   # 134                        Trinidad_and_Tobago    0              36.0
-   # 135                                    Tunisia    0              31.6
-   # 136                                     Turkey    0              30.9
-   # 137                                    Ukraine    0              40.6
-   # 138                       United_Arab_Emirates    0              30.3
-   # 140                United_Republic_of_Tanzania    0              17.7
-   # 142                                    Uruguay    0              35.0
-   # 143                                 Uzbekistan    0              28.6
-   # 144                                  Venezuela    0              28.3
-   # 145                                    Vietnam    0              30.5
+                                        Group.1    x          IdadeMedia.Median
+   30                                       China 3226              37.4
+   68                                       Italy 2158              45.5
+   64                                        Iran  853              30.3
+   125                                      Spain  309              42.7
+   49                                      France  148              41.4
+   141                   United_States_of_America   85              38.1
+   124                                South_Korea   81              41.8
+   139                             United_Kingdom   55              40.5
+   70                                       Japan   28              47.3
+   94                                 Netherlands   24              42.6
+   130                                Switzerland   14              42.4
+   52                                     Germany   13              47.1
+   105                                Philippines   12              23.5
+   65                                        Iraq    9              20.0
+   114                                 San_Marino    9              44.4
+   27  Cases_on_an_international_conveyance_Japan    7              40.0
+   129                                     Sweden    7              41.2
+   8                                    Australia    5              38.7
+   15                                     Belgium    5              41.4
+   63                                   Indonesia    5              30.2
+   3                                      Algeria    4              28.1
+   26                                      Canada    4              42.2
+   54                                      Greece    4              44.5
+   106                                     Poland    4              40.7
+   9                                      Austria    3              44.0
+   62                                       India    3              27.9
+   77                                     Lebanon    3              30.5
+   98                                      Norway    3              39.2
+   6                                    Argentina    2              31.7
+   22                                    Bulgaria    2              42.7
+   42                                     Ecuador    2              27.7
+   43                                       Egypt    2              23.9
+   66                                     Ireland    2              36.8
+   2                                      Albania    1              32.9
+   12                                     Bahrain    1              43.4
+   40                                     Denmark    1              42.2
+   55                                   Guatemala    1              22.1
+   57                                      Guyana    1              26.2
+   60                                     Hungary    1              42.3
+   81                                  Luxembourg    1              39.3
+   90                                     Morocco    1              29.3
+   102                                     Panama    1              29.2
+   127                                      Sudan    1              19.9
+   131                                     Taiwan    1              40.7
+   132                                   Thailand    1              37.7
+   1                                  Afghanistan    0              18.8
+   4                                      Andorra    0              44.3
+   5                          Antigua_and_Barbuda    0              31.9
+   7                                      Armenia    0              35.1
+   10                                  Azerbaijan    0              31.3
+   11                                     Bahamas    0              32.3
+   13                                  Bangladesh    0              26.7
+   14                                     Belarus    0              40.0
+   16                                       Benin    0              18.2
+   17                                      Bhutan    0              27.6
+   18                                     Bolivia    0              24.3
+   19                      Bosnia_and_Herzegovina    0              42.1
+   20                                      Brazil    0              32.0
+   21                           Brunei_Darussalam    0              30.2
+   23                                Burkina_Faso    0              17.3
+   24                                    Cambodia    0              25.3
+   25                                    Cameroon    0              18.5
+   28                    Central_African_Republic    0              19.7
+   29                                       Chile    0              34.4
+   31                                    Colombia    0              30.0
+   32                                       Congo    0              19.7
+   33                                  Costa_Rica    0              31.3
+   34                                Cote_dIvoire    0              36.5
+   35                                     Croatia    0              43.0
+   36                                        Cuba    0              41.5
+   37                                      Cyprus    0              36.8
+   38                              Czech_Republic    0              42.1
+   39            Democratic_Republic_of_the_Congo    0              23.9
+   41                          Dominican_Republic    0              28.1
+   44                           Equatorial_Guinea    0              19.8
+   45                                     Estonia    0              42.7
+   46                                    Eswatini    0              19.7
+   47                                    Ethiopia    0              17.9
+   48                                     Finland    0              42.5
+   50                                       Gabon    0              18.6
+   51                                     Georgia    0              38.1
+   53                                       Ghana    0              21.1
+   56                                      Guinea    0              18.9
+   58                                    Holy_See    0              23.0
+   59                                    Honduras    0              23.0
+   61                                     Iceland    0              36.5
+   67                                      Israel    0              29.9
+   69                                     Jamaica    0              26.0
+   71                                      Jordan    0              22.5
+   72                                  Kazakhstan    0              30.6
+   73                                       Kenya    0              19.7
+   74                                      Kosovo    0              24.6
+   75                                      Kuwait    0              29.3
+   76                                      Latvia    0              43.6
+   78                                     Liberia    0              17.8
+   79                               Liechtenstein    0              43.2
+   80                                   Lithuania    0              43.7
+   82                                    Malaysia    0              28.5
+   83                                    Maldives    0              28.2
+   84                                       Malta    0              41.8
+   85                                  Mauritania    0              20.5
+   86                                      Mexico    0              28.3
+   87                                     Moldova    0              36.7
+   88                                      Monaco    0              53.1
+   89                                    Mongolia    0              28.3
+   91                                     Myanmar    0              17.2
+   92                                     Namibia    0              21.2
+   93                                       Nepal    0              24.1
+   95                                 New_Zealand    0              37.9
+   96                                     Nigeria    0              18.4
+   97                             North_Macedonia    0              33.6
+   99                                        Oman    0              25.6
+   100                                   Pakistan    0              23.8
+   101                                  Palestine    0              33.4
+   103                                   Paraguay    0              28.2
+   104                                       Peru    0              28.0
+   107                                   Portugal    0              42.2
+   108                                      Qatar    0              33.2
+   109                                    Romania    0              41.1
+   110                                     Russia    0              39.6
+   111                                     Rwanda    0              19.0
+   112                                Saint_Lucia    0              34.8
+   113           Saint_Vincent_and_the_Grenadines    0              33.6
+   115                               Saudi_Arabia    0              27.5
+   116                                    Senegal    0              18.8
+   117                                     Serbia    0              42.6
+   118                                 Seychelles    0              35.4
+   119                                  Singapore    0              34.6
+   120                                   Slovakia    0              40.5
+   121                                   Slovenia    0              44.5
+   122                                    Somalia    0              18.1
+   123                               South_Africa    0              27.1
+   126                                  Sri_Lanka    0              32.8
+   128                                   Suriname    0              29.8
+   133                                       Togo    0              19.8
+   134                        Trinidad_and_Tobago    0              36.0
+   135                                    Tunisia    0              31.6
+   136                                     Turkey    0              30.9
+   137                                    Ukraine    0              40.6
+   138                       United_Arab_Emirates    0              30.3
+   140                United_Republic_of_Tanzania    0              17.7
+   142                                    Uruguay    0              35.0
+   143                                 Uzbekistan    0              28.6
+   144                                  Venezuela    0              28.3
+   145                                    Vietnam    0              30.5
 
 ```
 
    Dessa forma, lembrando que a idade média mundial é de 30.4 anos, vemos que todos os países com grande número de fatalidades apresentam idade média acima, ou muito próximo, dessa marca. Apesar disso, locais como Mônaco e Malta, cujos idade média ultrapassam muito a marca mundial, apresentam poucas mortes, assim como muitos outros exemplos. Então, apesar de poder ser um fator que impacta nas fatalidades, não é o único.
 
 
-## Questão 4
+4) procure textos que contenham estatisticas semelhates às calculadas acima, mas sobre SARS e H1N1, compare-as com as de convid-19.
+
+
 De acordo com dados oficiais divulgados no site da World Health Organization (WHO), alguns pontos a se destacar são:
 
 ### Influenza
