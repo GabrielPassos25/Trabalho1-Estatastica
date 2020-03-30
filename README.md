@@ -94,6 +94,7 @@ https://postimg.cc/bZkm022r --> Link para a imagem, com uma resolucão melhor (C
 <br>
 <br>
 Em relação ao número de <b>Casos</b>:
+
 ```r
    vector_cases <- tapply(COVID_19_geographic_disbtribution_worldwide_2020_03_17$Cases,COVID_19_geographic_disbtribution_worldwide_2020_03_17$DateRep,sum)
 ```
@@ -105,18 +106,21 @@ Assuma, para todos os exemplos abaixo, que ainda temos o vector_cases armazenado
 <br>
 <br>
 Média: 2309.731
+
 ```r
    mean_cases <- mean(vector_cases)
    mean_cases
    [1] 2309.731
 ```
 Mediana: 1675.5
+
 ```r
    median_cases <- median(vector_cases)
    median_cases
    [1] 1675.5
 ```
 Moda: 0
+
 ```r
    getmode <- function(v){
       uniqv <- unique(v)
@@ -143,6 +147,7 @@ Ex
 ```
 <b>tabulate(match(X,unicoX)</b> --> Conta o número de ocorrências de cada elemento distinto no vetor criado por match(X,unicoX).
 Ex:
+
 ```r
 Assuma que ainda temos o vetor "Ex", do exemplo passado.
 Ex
@@ -154,6 +159,7 @@ Ex2
 Isso nos mostra que o número 1 se repetiu 9 vezes, o 2 se repetiu 1 vez, assim como o 3 e o 4 se repetiram 2 vezes cada.
 <b>which.max(tabulate(match(X,unicoX))</b> --> Retorna a posição do elemento maximal do vetor criado por tabulate(match(X,unicoX)).
 Ex:
+
 ```r
 Assuma que ainda temos o vetor "Ex2", do exemplo passado.
 Ex2
@@ -172,6 +178,7 @@ Amplitude:
 <br>
 Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 16051 - 0 = 16051
 Variância: 10282559
+
 ```r
    variancia_cases <- var(vector_cases)
    variancia_cases
@@ -184,6 +191,7 @@ Desvio Padrão: 3206.643
    [1] 3206.643
 ```
 Em relação ao número de <b>Mortes</b>:
+
 ```r 
    vector_deaths <- casos.dia=tapply(COVID_19_geographic_disbtribution_worldwide_2020_03_17$Deaths,COVID_19_geographic_disbtribution_worldwide_2020_03_17$DateRep,sum) 
 ```
@@ -195,18 +203,21 @@ Assuma, para todos os exemplos abaixo, que ainda temos o vector_deaths.
 <br>
 <br>
 Média: 91.0641
+
 ```r
    mean_deaths <- mean(vector_deaths)
    mean_deaths
    [1] 91.0641
 ```
 Mediana: 61
+
 ```r
    median_deaths <- mean(vector_deaths)
    median_deaths
    [1] 61
 ```
 Moda: 0
+
 ```r
    CalcularModa <- function(X){
       unicoX <- unique(X)
@@ -221,12 +232,14 @@ Moda: 0
 Amplitude:
 Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 746 - 0 = 746
 Variância: 17611.62
+
 ```r
    variancia_deaths <- var(vector_deaths)
    variancia_deaths
    [1] 17611.62
 ```
 Desvio Padrão: 132.7088
+
 ```r
    dp_deaths <- sd(vector_deaths)
    dp_deaths
