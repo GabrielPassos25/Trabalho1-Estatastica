@@ -91,28 +91,42 @@ https://postimg.cc/bZkm022r --> Link para a imagem, com uma resolucão melhor (C
 <br>
 
 # Segunda Parte:
-<b>Todos os resultados são referentes ao número de casos e de mortes ao longo dos dias, mundialmente!</b>
 <br>
 <br>
 Em relação ao número de <b>Casos</b>:
+```r
+   vector_cases <- tapply(COVID_19_geographic_disbtribution_worldwide_2020_03_17$Cases,COVID_19_geographic_disbtribution_worldwide_2020_03_17$DateRep,sum)
+```
+2019-12-31 2020-01-01 2020-01-02 2020-01-03 2020-01-04 2020-01-05 2020-01-06 2020-01-07 2020-01-08 2020-01-09 2020-01-10 2020-01-11 2020-01-12 
+        27          0          0         17          0         15          0          0          0          0          0          0          0 
+2020-01-13 2020-01-14 2020-01-15 2020-01-16 2020-01-17 2020-01-18 2020-01-19 2020-01-20 2020-01-21 2020-01-22 2020-01-23 2020-01-24 2020-01-25 
+         1          0          1          0          5         17        136         20        153        142         97        266        453 
+2020-01-26 2020-01-27 2020-01-28 2020-01-29 2020-01-30 2020-01-31 2020-02-01 2020-02-02 2020-02-03 2020-02-04 2020-02-05 2020-02-06 2020-02-07 
+       673        797       1767       1480       1756       2003       2120       2608       2818       3243       3907       3751       3218 
+2020-02-08 2020-02-09 2020-02-10 2020-02-11 2020-02-12 2020-02-13 2020-02-14 2020-02-15 2020-02-16 2020-02-17 2020-02-18 2020-02-19 2020-02-20 
+      3442       2619       2988       2565       2072      15151       4215       2560       2162       2067       1995       1864        532 
+2020-02-21 2020-02-22 2020-02-23 2020-02-24 2020-02-25 2020-02-26 2020-02-27 2020-02-28 2020-02-29 2020-03-01 2020-03-02 2020-03-03 2020-03-04 
+       996       1085       1008        527        793        863       1106       1264       1838       1821       2044       1595       2413 
+2020-03-05 2020-03-06 2020-03-07 2020-03-08 2020-03-09 2020-03-10 2020-03-11 2020-03-12 2020-03-13 2020-03-14 2020-03-15 2020-03-16 2020-03-17 
+      2239       2856       3961       3691       3871       4537       4378       6887       8352       9375       8140      16051      12745 
+<br>
+Assuma, para todos os exemplos abaixo, que ainda temos o vector_cases armazenado no exemplo acima.
 <br>
 <br>
 <b>Medidas de posição</b>:
 <br>
 <br>
-Média: 33.43708
+Média: 2309.731
 ```r
-   vector_cases <-COVID$Cases
    mean_cases <- mean(vector_cases)
    mean_cases
-   [1] 33.43708
+   [1] 2309.731
 ```
-Mediana: 0
+Mediana: 1675.5
 ```r
-   vector_cases <-COVID$Cases
    median_cases <- median(vector_cases)
    median_cases
-   [1] 0
+   [1] 1675.5
 ```
 Moda: 0
 ```r
@@ -122,7 +136,8 @@ Moda: 0
    }
    mode_cases <- getmode(vector_cases)
    mode_cases
-   [1] 0
+   2020-01-01 
+       0 
 ```
 <b>Explicando melhor a função da moda:</b>
 <br>
@@ -166,38 +181,54 @@ Isso nos mostra que o maximal (9), que representa o número que mais se repetiu 
 <br>
 Amplitude: 
 <br>
-Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 15141 - (-9) = 15150
-Variância: 95297.74
+Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 16051 - 0 = 16051
+Variância: 10282559
 ```r
-   variancia_cases <- var(COVID$Cases)
+   variancia_cases <- var(vector_cases)
    variancia_cases
-   [1] 95297.74
+   [1] 10282559
 ```
-Desvio Padrão: 308.7033
+Desvio Padrão: 3206.643
 ```r
-   dp_cases <- sd(COVID$Cases)
+   dp_cases <- sd(vector_cases)
    dp_cases
-   [1] 308.7033
+   [1] 3206.643
 ```
 Em relação ao número de <b>Mortes</b>:
+```r 
+   vector_deaths <- casos.dia=tapply(COVID_19_geographic_disbtribution_worldwide_2020_03_17$Deaths,COVID_19_geographic_disbtribution_worldwide_2020_03_17$DateRep,sum) 
+   vector_deaths
+   2019-12-31 2020-01-01 2020-01-02 2020-01-03 2020-01-04 2020-01-05 2020-01-06 2020-01-07 2020-01-08 2020-01-09 2020-01-10 2020-01-11 2020-01-12 
+         0          0          0          0          0          0          0          0          0          0          0          1          0 
+2020-01-13 2020-01-14 2020-01-15 2020-01-16 2020-01-17 2020-01-18 2020-01-19 2020-01-20 2020-01-21 2020-01-22 2020-01-23 2020-01-24 2020-01-25 
+         0          0          1          0          0          0          1          0          3         11          0          9         15 
+2020-01-26 2020-01-27 2020-01-28 2020-01-29 2020-01-30 2020-01-31 2020-02-01 2020-02-02 2020-02-03 2020-02-04 2020-02-05 2020-02-06 2020-02-07 
+        15         25         25         26         38         43         46         46         57         65         66         72         73 
+2020-02-08 2020-02-09 2020-02-10 2020-02-11 2020-02-12 2020-02-13 2020-02-14 2020-02-15 2020-02-16 2020-02-17 2020-02-18 2020-02-19 2020-02-20 
+        86         89         97        108         97        255         13        144        142        106         98        139        116 
+2020-02-21 2020-02-22 2020-02-23 2020-02-24 2020-02-25 2020-02-26 2020-02-27 2020-02-28 2020-02-29 2020-03-01 2020-03-02 2020-03-03 2020-03-04 
+       119        112        104        156         79         64         38         57         64         58         67         72         84 
+2020-03-05 2020-03-06 2020-03-07 2020-03-08 2020-03-09 2020-03-10 2020-03-11 2020-03-12 2020-03-13 2020-03-14 2020-03-15 2020-03-16 2020-03-17 
+        80        103        103         97        229        209        269        326        351        438        354        746        596 
+```
+<br>
+Assuma, para todos os exemplos abaixo, que ainda temos o vector_deaths.
 <br>
 <br>
 <b>Medidas de posição</b>:
 <br>
 <br>
-Média: 1.3183
+Média: 91.0641
 ```r
-   vector_deaths <-COVID$Deaths
    mean_deaths <- mean(vector_deaths)
    mean_deaths
-   [1] 1.3183
+   [1] 91.0641
 ```
-Mediana: 0
+Mediana: 61
 ```r
-   vector_deaths <-COVID$Deaths
    median_deaths <- mean(vector_deaths)
    median_deaths
-   [1] 0
+   [1] 61
 ```
 Moda: 0
 ```r
@@ -212,18 +243,18 @@ Moda: 0
 <b>Medidas de dispersão</b>:
 <br>
 Amplitude:
-Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 370 - 0 = 370
-Variância: 165.6523
+Com um calculo simples obtive a amplitude --> A = CasesMax - CasesMin = 746 - 0 = 746
+Variância: 17611.62
 ```r
-   variancia_deaths <- var(COVID$Deaths)
+   variancia_deaths <- var(vector_deaths)
    variancia_deaths
-   [1] 165.6523
+   [1] 17611.62
 ```
-Desvio Padrão: 308.7033
+Desvio Padrão: 132.7088
 ```r
-   dp_deaths <- sd(COVID$Deaths)
+   dp_deaths <- sd(vector_deaths)
    dp_deaths
-   [1] 12.8706
+   [1] 132.7088
 ```
 2) Considere o número de casos de COVID-19 por país, e os dados sobre a idade média da população de cada país, existe uma correlação entre idade da população e número de contágios?
 
