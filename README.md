@@ -1,8 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
 # Trabalho1-Estatística
 Author: "GabrielPassos", "GabrielBrilhante"
 
